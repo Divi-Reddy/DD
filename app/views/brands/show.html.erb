@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @brand %>
+
+<div>
+  <%= link_to "Edit this brand", edit_brand_path(@brand) ,class:"button is-primary is-light"%>
+  <%= link_to "Back to brands", brands_path,class:"button is-primary is-light" %><br>
+  <br>
+  <%= button_to "Destroy this brand", @brand, method: :delete ,class:"button is-primary is-light"%>
+</div>

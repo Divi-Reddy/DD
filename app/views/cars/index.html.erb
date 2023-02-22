@@ -1,0 +1,17 @@
+<section class="has-text-centered">
+  <p style="color: green"><%= notice %></p>
+
+  <p class="is-size-3 has-text-weight-bold">Cars</p>
+
+  <div id="cars">
+    <% @cars.each do |car| %>
+      <%= render car %>
+      <p class="button is-primary is-light">
+        <%= link_to "Show this car", car %>
+      </p>
+    <% end %>
+  </div>
+  <div class="button is-primary is-light ">
+    <%= link_to "New car", new_car_path %>
+  </div>
+</section>

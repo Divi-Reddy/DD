@@ -1,0 +1,7 @@
+<%= form_for @user, url: update_permissions_path do |f| %>
+  <div class="field">
+    <%= f.label :permission_level %>
+    <%= f.select :permission_level, options_for_select([["User", "user"], ["Admin", "admin"]], @user.permission_level), include_blank: true %>
+  </div>
+  <%= f.submit "Update Permissions", class: "button is-primary" %>
+<% end %>

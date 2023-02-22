@@ -1,0 +1,16 @@
+<section class="has-text-centered">
+<p style="color: green"><%= notice %></p>
+
+<p class="is-size-1 has-text-weight-bold">Variants</p>
+
+<div id="variants">
+  <% @variants.each do |variant| %>
+    <%= render variant %>
+    <p>
+      <%= link_to "Show this variant", variant,class:"button is-primary is-light" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New variant", new_variant_path ,class:"button is-primary is-light" %>
+</section>

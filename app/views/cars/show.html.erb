@@ -1,0 +1,12 @@
+<section class="has-text-centered">
+<p style="color: green"><%= notice %></p>
+
+<%= render @car %>
+
+<div>
+  <%= link_to "Edit this car", edit_car_path(@car),class:"button is-primary is-light" %>
+  <%= link_to "Back to cars", cars_path,class:"button is-primary is-light" %>
+
+  <%= button_to "Destroy this car", @car, method: :delete,class:"button is-primary is-light" %>
+</div>
+</section>

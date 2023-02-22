@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  details: MyText
+  availability: false
+  car: one
+
+two:
+  model: MyString
+  details: MyText
+  availability: false
+  car: two

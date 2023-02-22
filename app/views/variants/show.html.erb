@@ -1,0 +1,12 @@
+<section class="has-text-centered">
+<p style="color: green"><%= notice %></p>
+
+<%= render @variant %>
+
+<div>
+  <%= link_to "Edit this variant", edit_variant_path(@variant), class:"button is-primary is-light" %>
+  <%= link_to "Back to variants", variants_path, class:"button is-primary is-light" %>
+
+  <%= button_to "Destroy this variant", @variant, method: :delete,class:"button is-primary is-light" %>
+</div>
+</section>

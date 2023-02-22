@@ -1,0 +1,31 @@
+<div id="<%= dom_id car %>">
+  <p>
+    <strong>Name:</strong>
+    <%= car.name %>
+  </p>
+
+  <p>
+    <strong>Brand:</strong>
+    <%= car.brand.name %>
+  </p>
+
+  <p>
+    <strong>Launched:</strong>
+    <%= car.launched %>
+  </p>
+
+  <p>
+    <strong>Launch date:</strong>
+    <%= car.launch_date %>
+  </p>
+  <p>
+    <strong>Variants Available:</strong>
+    <%if car.variant.empty?%>
+      <li>None</li>
+    <%else%>
+      <%car.variant.each do |variant|%>
+        <li><%= link_to variant.model ,variant_path(variant)%></li>
+      <%end%>
+    <%end%> 
+  </p>
+</div>

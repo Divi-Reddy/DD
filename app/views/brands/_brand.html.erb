@@ -1,0 +1,16 @@
+<div id="<%= dom_id brand %>", class="has-text-centered">
+  <p>
+    <strong>Brand Name:</strong>
+    <%= brand.name%>
+  </p>
+
+  <p>
+    <strong>Models Available:</strong>
+    <%if brand.car.empty?%>
+      <li>None</li>
+    <%else%>
+      <%brand.car.each do |car|%>
+        <li><%= link_to car.name ,car_path(car)%></li>
+      <%end%>
+    <%end%>
+  </p>

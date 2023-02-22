@@ -1,0 +1,69 @@
+<section class="hero is-info is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="/" class="navbar-item ">
+              Home
+            </a>
+            <a href="/about_us/index"class="navbar-item">
+              About Us
+            </a>
+            <span class="navbar-item">
+            <% if user_signed_in? %>
+              <a href="/users/sign_out" class="button is-hero is-inverted">
+              <span>Sign out</span>
+            <% else %>
+              <a href="/users/sign_in" class="button is-hero is-inverted">
+              <span>Sign in</span>
+            <% end %>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+<section class="hero is-info is-small">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body-white container has-text-centered">
+      <%= image_tag "chalo-2.png", alt: "My Image", class: "mx-auto", style: "max-width: 100px; max-height: 100px;" %>
+  </div>
+</section>
+<!--section class="hero is-info is-small">
+  <div class="hero-body"> 
+    <div class="has-text-centered ">
+      <p class=" container title has-background-white has-text-info-dark">
+        CHALO
+      </p>
+      <p class="container subtitle has-background-white has-text-info">
+        Plan your next Trip
+      </p> 
+    </div>
+  </div>
+</section-->
+<section class="hero is-info is-small">
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li><a href="/brands" >Brands</a></li>
+          <li><a href="/cars">Cars</a></li>
+          <li><a href="/variants">Variants</a></li>
+          <li><a href="/coming_soon">Order Time</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>

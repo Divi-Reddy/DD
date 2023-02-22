@@ -1,0 +1,12 @@
+<section class="has-text-centered">
+<h1 class="is-size-3">Editing car</h1>
+
+<%= render "form", car: @car %>
+
+<br>
+
+<div>
+  <%= link_to "Show this car", @car,class:"button is-primary is-light" %> |
+  <%= link_to "Back to cars", cars_path,class:"button is-primary is-light" %>
+</div>
+</section>
