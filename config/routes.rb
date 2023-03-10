@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users  
   get 'about_us/index'
   get '/coming_soon', to: 'pages#coming_soon'
+  get '/perm', to: 'users#update_permissions'
   resources :variants
   resources :cars
   resources :brands

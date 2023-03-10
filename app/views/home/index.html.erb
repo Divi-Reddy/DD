@@ -1,3 +1,65 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<li><a href="/">Home</a> </li>
+<!DOCTYPE html>
+<%= stylesheet_link_tag "indexStyle"%>
+    <section class="hero is-fullheight is-dark is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Welcome to Chalo
+          </h1>
+          <h2 class="subtitle">
+            Browse our collection of Cars and find your perfect ride.
+          </h2>
+          <a href="/brands" class="button is-primary is-large">
+            Browse Cars By Brands
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3 class="title is-3">
+          Choose By:
+        </h3>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <a href='/brands'>
+            <div class="card">
+              <div class="card-content">
+                <h4 class="title is-4">Brands</h4>
+                <p>Choose From all available Brands</p>
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="column is-one-third">
+            <a href='/cars'>
+            <div class="card">
+              <div class="card-content">
+                <h4 class="title is-4">Cars</h4>
+                <p>Choose From all available Brands</p>
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="column is-one-third">
+          <a href='/variants'>
+            <div class="card">
+              <div class="card-content">
+                <h4 class="title is-4">Variants</h4>
+                <p>Choose From all available Variants</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+            <strong>Chalo trail Version</strong>
+        </div>
+      </div>
+    </footer>

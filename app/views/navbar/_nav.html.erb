@@ -67,3 +67,8 @@
     </nav>
   </div>
 </section>
+<% if flash[:notice].present? %>
+  <div id="notification" class="notification is-primary is-hidden has-text-centeres">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
