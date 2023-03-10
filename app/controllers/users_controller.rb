@@ -14,12 +14,16 @@ class UsersController < ApplicationController
     end
   end
   def update_permissions
-    authorize! :update_permissions, @user, :message => 'Not authorized as an administrator.'
-    user = User.find(params[:id])
-    user.admin = params[:admin]
-    user.save
-    redirect_to users_path
+    @user = User.find(params[:id])
+    authorize! :update_permissions, @user
+  
+    if @user.update(admin: true)
+      redirect_to @user, notice: "User updated to admin successfully."
+    else
+      render :edit
+    end
   end
+  
   private
 
   def user_params

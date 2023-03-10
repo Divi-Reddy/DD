@@ -1,7 +1,7 @@
 class BrandsController < ApplicationController
 
   
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_brand, only: %i[ show edit update destroy ]
  # load_and_authorize_resource
   # GET /brands or /brands.json
